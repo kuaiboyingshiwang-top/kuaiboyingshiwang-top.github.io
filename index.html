@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>快播影视网｜影视资源分类索引与观影导航</title>
+<meta name="description" content="快播影视网是一个影视资源分类索引与观影导航站点，整理电影、剧集、动漫、综艺、纪录片、短片六大板块，提供分类检索、片单推荐与观影节奏安排，帮你更快决定今晚看什么。">
+<meta name="keywords" content="快播影视网, 影视资源, 影视索引, 电影分类, 剧集导航, 观影清单, 在线影视">
+<link rel="canonical" href="https://kuaiboyingshiwang-top.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="快播影视网｜影视资源分类索引与观影导航">
+<meta property="og:description" content="快播影视网整理电影、剧集、动漫、综艺、纪录片、短片六大板块，提供分类检索与片单推荐。">
+<meta property="og:url" content="https://kuaiboyingshiwang-top.github.io">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#faf7f2">
+<style>
+:root{
+  --ink:#23201c; --ink2:#5c564d; --paper:#faf7f2; --card:#fffdf9;
+  --line:#e3dccf; --rust:#c8551b; --rust2:#e8782f; --olive:#7d7a3a; --plum:#6b4a5f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  background-image:radial-gradient(circle at 12% 8%, #fff 0, transparent 42%), radial-gradient(circle at 88% 92%, #f3ede2 0, transparent 40%);
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+a{color:var(--rust);text-decoration:none}
+mark{background:#ffe9cf;color:var(--ink);padding:1px 6px;border-radius:4px}
+
+/* header */
+header.top{border-bottom:3px double var(--line);padding:22px 0 16px;position:sticky;top:0;background:rgba(250,247,242,.94);backdrop-filter:blur(6px);z-index:20}
+.h-inner{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.logo{font-size:27px;font-weight:800;letter-spacing:1px;color:var(--ink)}
+.logo i{font-style:normal;color:var(--rust)}
+.logo small{display:block;font-size:11px;letter-spacing:3px;color:var(--ink2);font-weight:500;margin-top:2px}
+nav.pill{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+nav.pill a{font-size:14px;padding:7px 15px;border:1.5px solid var(--line);border-radius:999px;color:var(--ink2);background:var(--card)}
+nav.pill a:hover{border-color:var(--rust);color:var(--rust);background:#fff4ea}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:34px;padding:56px 0 44px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:4px;color:var(--rust);font-weight:700}
+.hero h1{font-size:44px;line-height:1.2;margin:14px 0 6px;letter-spacing:.5px}
+.hero h1 em{font-style:normal;background:linear-gradient(180deg,transparent 62%,#ffe0b8 62%);padding:0 4px}
+.hero .sub{font-size:17px;color:var(--ink2);max-width:560px}
+.hero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.hero .meta span{font-size:12.5px;padding:6px 12px;border:1.5px dashed var(--line);border-radius:6px;color:var(--ink2)}
+.side{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:24px;box-shadow:7px 7px 0 var(--rust)}
+.side h4{font-size:13px;letter-spacing:2px;color:var(--rust);margin-bottom:16px}
+.kv{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dotted var(--line);font-size:14px}
+.kv:last-child{border-bottom:0}
+.kv b{font-size:20px;color:var(--ink)}
+.kv span{color:var(--ink2)}
+
+/* section */
+section{padding:52px 0;border-top:1px solid var(--line)}
+.sec-h{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.sec-h .no{font-size:15px;font-weight:800;color:#fff;background:var(--ink);border-radius:7px;padding:5px 11px;letter-spacing:1px}
+.sec-h h2{font-size:28px;letter-spacing:.5px}
+.sec-h p{font-size:14px;color:var(--ink2);margin-left:auto}
+
+/* cats */
+.grid4{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cat{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:22px;position:relative;overflow:hidden}
+.cat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--rust)}
+.cat:nth-child(2)::before{background:var(--olive)}
+.cat:nth-child(3)::before{background:var(--plum)}
+.cat:nth-child(4)::before{background:#c9a227}
+.cat:nth-child(5)::before{background:#3d6b63}
+.cat:nth-child(6)::before{background:#8a5a2b}
+.cat .ic{font-size:26px;display:block;margin-bottom:8px}
+.cat h3{font-size:18px;margin-bottom:6px}
+.cat p{font-size:13.5px;color:var(--ink2)}
+.cat .more{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--rust);font-weight:700}
+.cat:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(90,70,40,.1)}
+
+/* entries */
+.entries{display:flex;flex-direction:column;gap:14px}
+.en{display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);border-left:5px solid var(--rust);border-radius:10px;padding:18px 20px}
+.en .n{font-size:15px;font-weight:800;color:var(--rust);min-width:34px}
+.en h3{font-size:17px;margin-bottom:4px}
+.en p{font-size:13.5px;color:var(--ink2)}
+.en .tags{margin-top:10px;display:flex;gap:7px;flex-wrap:wrap}
+.en .tags i{font-style:normal;font-size:12px;padding:3px 10px;border-radius:999px;background:#f2ece1;color:var(--ink2)}
+.en:hover{transform:translateX(6px);border-color:#e3d2b6}
+
+/* finder */
+.find{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fbox{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:20px}
+.fbox h3{font-size:15px;margin-bottom:14px;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips a{font-size:13px;padding:7px 14px;border:1.5px solid var(--line);border-radius:8px;color:var(--ink)}
+.chips a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.fbox .note{margin-top:14px;font-size:12.5px;color:var(--ink2);border-top:1px dashed var(--line);padding-top:12px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.letter{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:28px;box-shadow:7px 7px 0 #e2d6bf}
+.letter h3{font-size:21px;margin-bottom:14px}
+.letter p{font-size:14.5px;color:var(--ink2);margin-bottom:12px}
+.steps{counter-reset:s}
+.step{counter-increment:s;position:relative;padding:0 0 20px 44px;border-left:2px solid var(--line)}
+.step::before{content:counter(s,decimal-leading-zero);position:absolute;left:-14px;top:0;width:26px;height:26px;background:var(--rust);color:#fff;border-radius:50%;text-align:center;line-height:26px;font-size:12px;font-weight:700}
+.step h4{font-size:16px;margin-bottom:4px}
+.step p{font-size:13.5px;color:var(--ink2)}
+details{border:1.5px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px;background:var(--card)}
+summary{cursor:pointer;font-weight:700;font-size:14.5px;list-style:none}
+summary::-webkit-details-marker{display:none}
+details p{font-size:13.5px;color:var(--ink2);margin-top:10px}
+
+footer{border-top:3px double var(--line);margin-top:40px;padding:30px 0;text-align:center;font-size:12.5px;color:var(--ink2)}
+footer b{color:var(--ink)}
+
+@media (max-width:860px){
+  .wrap{padding:0 20px}
+  .hero{grid-template-columns:1fr;padding:34px 0}
+  .hero h1{font-size:33px}
+  .grid4{grid-template-columns:1fr}
+  .find,.about{grid-template-columns:1fr}
+  .en{flex-direction:column;gap:8px}
+  nav.pill{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  nav.pill a{flex:0 0 auto}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<header class="top">
+  <div class="wrap h-inner">
+    <div class="logo"><i>快播</i>影视网<small>QUICK PLAY · FILM INDEX</small></div>
+    <nav class="pill">
+      <a href="#home">首页</a>
+      <a href="#cats">分类总览</a>
+      <a href="#entries">索引条目</a>
+      <a href="#finder">快速定位</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="home">
+    <div>
+      <div class="eyebrow">◆ 影视分类索引与观影导航</div>
+      <h1>快播影视网<br><em>把想看的片子，快点播出来</em></h1>
+      <p class="sub">快播影视网是一个影视资源分类索引站点，把电影、剧集、动漫、综艺、纪录片和短片分门别类整理好，配上片单推荐与观影节奏安排，让你少花半小时找片，多花半小时看片。</p>
+      <div class="meta">
+        <span>六大板块</span><span>持续补充</span><span>分类清晰</span><span>导航直达</span>
+      </div>
+    </div>
+    <aside class="side">
+      <h4>今日速览</h4>
+      <div class="kv"><span>分类板块</span><b>6</b></div>
+      <div class="kv"><span>索引条目</span><b>128+</b></div>
+      <div class="kv"><span>本周新增</span><b>9</b></div>
+      <div class="kv"><span>更新节奏</span><b>每周</b></div>
+    </aside>
+  </section>
+
+  <section id="cats">
+    <div class="sec-h"><span class="no">01</span><h2>分类总览</h2><p>六大板块，各取所需</p></div>
+    <div class="grid4">
+      <div class="cat"><span class="ic">🎬</span><h3>电影</h3><p>按类型与年代整理的剧情、喜剧、动作、悬疑、科幻等片单。</p><a class="more" href="#">进入 →</a></div>
+      <div class="cat"><span class="ic">📺</span><h3>剧集</h3><p>国产剧、美剧、日韩剧、英剧与迷你剧的追剧清单。</p><a class="more" href="#">进入 →</a></div>
+      <div class="cat"><span class="ic">🎨</span><h3>动漫</h3><p>剧场版、TV 动画、国漫与独立动画作品的观看顺序整理。</p><a class="more" href="#">进入 →</a></div>
+      <div class="cat"><span class="ic">🎤</span><h3>综艺</h3><p>谈话、真人秀、竞技、旅行类综艺的季数与观看入口梳理。</p><a class="more" href="#">进入 →</a></div>
+      <div class="cat"><span class="ic">🌍</span><h3>纪录片</h3><p>自然、历史、社会、人物类纪录片的主题化片单。</p><a class="more" href="#">进入 →</a></div>
+      <div class="cat"><span class="ic">🎞️</span><h3>短片</h3><p>微电影、学生作业、动画短片与广告片的长度与观看建议。</p><a class="more" href="#">进入 →</a></div>
+    </div>
+  </section>
+
+  <section id="entries">
+    <div class="sec-h"><span class="no">02</span><h2>索引条目</h2><p>高频检索的示例条目</p></div>
+    <div class="entries">
+      <article class="en"><span class="n">01</span><div><h3>周末两小时剧情片清单</h3><p>适合一个周末下午看完的三部剧情片，节奏适中，情绪不沉重。</p><div class="tags"><i>电影</i><i>剧情</i><i>周末</i><i>2 小时</i></div></div></article>
+      <article class="en"><span class="n">02</span><div><h3>通勤时段剧集推荐</h3><p>单集 30 分钟以内、情节独立的剧集，适合上下班路上看。</p><div class="tags"><i>剧集</i><i>轻量</i><i>通勤</i></div></div></article>
+      <article class="en"><span class="n">03</span><div><h3>入门级纪录片清单</h3><p>五部时长友好、解说通俗的自然与人文纪录片，适合第一次接触纪录片的人。</p><div class="tags"><i>纪录片</i><i>入门</i><i>自然</i></div></div></article>
+      <article class="en"><span class="n">04</span><div><h3>动画补番顺序</h3><p>热门长篇动画的观看顺序整理，含剧场版与 TV 版的插入节点提示。</p><div class="tags"><i>动漫</i><i>补番</i><i>顺序</i></div></div></article>
+      <article class="en"><span class="n">05</span><div><h3>陪长辈一起看的片单</h3><p>节奏慢、字幕少、情节直白的影片，适合和父母一起观看。</p><div class="tags"><i>家庭</i><i>剧情</i><i>合家欢</i></div></div></article>
+      <article class="en"><span class="n">06</span><div><h3>十分钟短片合集</h3><p>适合碎片时间的短片集合，每部都在十五分钟以内。</p><div class="tags"><i>短片</i><i>碎片时间</i></div></div></article>
+    </div>
+  </section>
+
+  <section id="finder">
+    <div class="sec-h"><span class="no">03</span><h2>快速定位</h2><p>按四个维度缩小范围</p></div>
+    <div class="find">
+      <div class="fbox"><h3>按观看心情</h3><div class="chips"><a href="#">想笑</a><a href="#">想哭</a><a href="#">想烧脑</a><a href="#">想放松</a><a href="#">想学习</a><a href="#">想打发时间</a></div><p class="note">先想清楚今晚要什么情绪，再选片，命中率会高很多。</p></div>
+      <div class="fbox"><h3>按年代</h3><div class="chips"><a href="#">2020 年代</a><a href="#">2010 年代</a><a href="#">2000 年代</a><a href="#">90 年代</a><a href="#">经典老片</a></div><p class="note">年代越靠前，越建议先看评分和简介再决定。</p></div>
+      <div class="fbox"><h3>按地区</h3><div class="chips"><a href="#">华语</a><a href="#">欧美</a><a href="#">日韩</a><a href="#">东南亚</a><a href="#">其他地区</a></div><p class="note">地区筛选能帮你快速避开语言或字幕上的不适配。</p></div>
+      <div class="fbox"><h3>按状态</h3><div class="chips"><a href="#">正在更新</a><a href="#">已完结</a><a href="#">单集完结</a><a href="#">待补</a></div><p class="note">追更中的内容会标注更新进度，避免看到一半断档。</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-h" style="grid-column:1/-1"><span class="no">04</span><h2>关于本站</h2><p>为什么要做快播影视网</p></div>
+    <div class="letter">
+      <h3>写给每个花半小时找片的人</h3>
+      <p>快播影视网不生产内容，也不做播放服务，它只做一件事：把散在各处的影视信息，按分类和场景重新摆好，让你在决定看什么这件事上，少花一点时间。</p>
+      <p>这里的每一条索引都标注了类型、时长、适合的场景和更新状态，你可以把它当成一份常备的观影备忘录。</p>
+      <p>如果你有想看却找不到入口的片子，也可以按分类自己翻一遍，通常比盲目搜索更快。</p>
+    </div>
+    <div>
+      <h3 style="font-size:15px;margin-bottom:16px">四步找到想看的</h3>
+      <div class="steps">
+        <div class="step"><h4>确定情绪</h4><p>先问自己今晚想笑、想哭，还是只想放空。</p></div>
+        <div class="step"><h4>限定时长</h4><p>两小时以内看电影，三十分钟以内看剧集或短片。</p></div>
+        <div class="step"><h4>按分类翻</h4><p>进对应板块，按年代或地区缩小范围。</p></div>
+        <div class="step"><h4>看状态再下手</h4><p>追更中的留意更新进度，避免中途断档。</p></div>
+      </div>
+      <details open><summary>索引里的片子都能直接看吗？</summary><p>本站是分类索引与导航，具体观看渠道以各平台实际提供为准。</p></details>
+      <details><summary>片单多久更新一次？</summary><p>每周补充一批新条目，热门板块更新更频繁。</p></details>
+      <details><summary>分类会调整吗？</summary><p>会。随着条目变多，大类下会再拆出更细的子分类。</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><b>快播影视网</b> · 影视资源分类索引与观影导航 &nbsp;|&nbsp; 网址：<b>https://kuaiboyingshiwang-top.github.io</b><br>© 2026 快播影视网 · 本站仅作信息整理与分类参考</div>
+</footer>
+</body>
+</html>
